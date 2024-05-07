@@ -1,0 +1,563 @@
+ @import url('https://fonts.googleapis.com/css2?family=Marvel:ital,wght@0,700;1,700&family=Roboto&display=swap');
+ *{
+    text-decoration: none;
+    font-family: 'Marvel','Roboto', sans-serif;
+}
+html{
+    font-family: 'Marvel','Roboto', sans-serif;
+    box-sizing: border-box;
+    background-color: #000;
+    color: whitesmoke;
+    scroll-behavior: smooth;
+}
+body{
+    min-height: 100vh;
+}
+header{
+     position: absolute; 
+    top: 0;
+    left: 0;
+ right: 0;
+ background: #000;
+ box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+ padding: 0px 7%;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ z-index: 10000;
+}
+header .logo{
+    font-weight: bolder;
+    font-size: 40px;
+    color: #fff;
+    text-transform: capitalize;
+}
+header .navbar ul{
+    list-style: none;
+
+}
+header .navbar ul li{
+    position: relative;
+    float: left;
+}
+header .navbar ul li a{
+    font-size: 20px;
+    padding: 20px;
+    color: #fff;
+    display: block;
+}
+header .navbar ul li a:hover{
+    
+    color: red;
+}
+header .navbar ul li ul{
+    position: absolute;
+    left: -40px;
+    width: 150px;
+    background: #000;
+    display: none;
+}
+header .navbar ul li ul li{
+    width: 100%;
+    border-top: 1px solid rgba(22, 21, 21, 0.446);
+
+}
+
+header .navbar ul li ul li ul {
+    left: 100px;
+    top: 0;
+}
+header .navbar ul li:focus-within >ul,
+header .navbar ul li:hover>ul{
+    display: initial;
+}
+#menu-bar{
+    display: none;
+    color: #fff;
+}
+header label{
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+}
+
+@media (max-width:991px) {
+    header{
+        padding: 20px;
+    }
+    header label{
+        display: initial;
+    }
+    header .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;right: 0;
+        background: #000;
+        border-top: 1px solid rgba(0,0,0,0.1);
+        display: none;
+    }
+    header .navbar ul li{
+        width: 100%;
+
+    }
+    
+    header .navbar ul li ul{
+        position: relative;
+        width: 100%;
+        left: 0;
+
+    }
+    header .navbar ul li ul li{
+        background: #000;
+        color: #000;
+
+    }
+    header .navbar ul li ul li ul{
+        width: 100%;
+        left: 0;
+    }
+    #menu-bar:checked~.navbar{
+        display: initial;
+    }
+}
+/* main section*/
+.container{
+ min-height: 400px;
+ height: 500px;
+ background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('image/img2.jpg');
+ background-size:cover ;
+ background-repeat: no-repeat;
+ color: #fff;
+ display: grid;
+ align-content: center;
+ justify-content: center;
+}
+a.goup {
+    height: 40px;
+       width: 40px;
+       margin:8px;
+       border-radius: 50%;
+       text-align: center;
+        line-height: 40px; 
+       color: #fff;
+       font-size: 40px;
+       background: red;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 20;
+
+}
+.container h1{
+    font-size: 5rem;
+    margin: 0;
+    text-align: center;
+}
+.container h3{
+    font-size: 2rem;
+    margin: 0;
+    text-align: center;
+}
+.container img {
+    height: 100px;
+    float: left;
+}
+.container2 {
+    background:url("image/ix59d5ym62o91-ai-brush-removebg-6t1khmch.png");
+    height: auto;
+    background-position: left;
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+    
+    
+}
+.container2 h1{
+    text-align: center;
+    font-weight: 900;
+    font-size: 3rem;
+    margin-bottom: 0;
+    
+}
+.container2 p{
+    font-size: 1.5rem;
+    filter: drop-shadow(0px 0px 0px #fff);
+}
+hr{
+    height: 5px;
+    background: linear-gradient(to right,rgb(226,54,54),rgb(0,0,0),rgb(80,74,74),rgb(81,140,202),rgb(247,143,63));
+    border-radius:30px ;
+    border: none;
+}
+.box{
+    float: right;
+    width: 170px;
+    border: 3px dotted #fff;
+    margin-top: 24px;
+}
+.box h5{
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 0;
+  
+}
+.head h1:first-child{
+    font-size: 5rem;
+    margin: 0;
+    text-align: center;
+
+}
+.head h3{
+    font-size: 2rem;
+    margin: 0;
+    text-align: center;
+}
+.head h1{
+    font-size: 2rem;
+    margin: 0;
+    margin-top: 2rem;
+    text-align: center;
+    color: red;
+}
+.head ul li{
+    font-size: 1.2rem;
+}
+.head ul li::first-letter{
+    text-transform: uppercase;
+    font-size: 30px;
+    color: #f0131e;
+}
+
+ul{
+     list-style: '🕷'; 
+     list-style-position: outside;  
+} 
+.pokemon{
+    
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+            grid-column-gap: 120px;
+            grid-row-gap: 30px;
+           
+}
+.Phases1 .phases1{
+    margin-bottom: 0;
+    font-size: 2.5rem;
+    text-align: center;
+    font-family: 'Roboto';
+    font-weight: 900;
+    background:url('image/834926.webp');
+    background-position: center;
+    background-clip: text;
+    color: transparent;  
+    text-transform: uppercase;
+}
+/*  */
+.card{
+    max-height: 380px;
+    background: #fff;
+    border: 2px solid #fff;
+    box-shadow: 0px 4px 7px rgba(0,0,0,.5);
+    cursor: pointer;
+    transition: all .5s cubic-bezier(.8,.5,.2,1.4);
+    overflow: hidden;
+    position: relative;
+}
+
+.card img{
+    width: 100%;
+    height:100%;
+    transition: all .5s cubic-bezier(.8,.5,.2,1.4);
+}
+.descriptions{
+    position: absolute;
+    top:0px;
+    left:0px;
+    background-color: rgba(39, 38, 38, 0.7);
+    width:100%;
+    height:100%;
+    transition: all .7s ease-in-out;
+    padding: 20px;
+    box-sizing: border-box;
+    clip-path: circle(0% at 100% 100%);
+    overflow: scroll; 
+}
+.descriptions p{
+    line-height: 24px;
+    min-height: 70%;
+}
+.card:hover .descriptions{
+    transition: all .7s ease-in-out;
+    clip-path: circle(75%);
+}
+.descriptions::-webkit-scrollbar {
+    display: none;
+}
+.card:hover{
+    transition: all .5s cubic-bezier(.8,.5,.2,1.4);
+    box-shadow: 0px 2px 3px rgba(0,0,0,.3);
+    transform: scale(.97);
+}
+.card:hover img{
+    transition: all .5s cubic-bezier(.8,.5,.2,1.4);
+    transform: scale(1.4) rotate(5deg);
+    filter: blur(5px);
+}
+.card h1{
+    color: #ff3838;
+    letter-spacing: 1px;
+    font-family: 'Roboto';
+    margin: 0px;
+}
+.card p{
+    line-height: 24px;
+    min-height: 70%; 
+}
+.card button{
+    width: fit-content;
+    height: 40px;
+    cursor: pointer;
+    /* position: fixed; */
+    border-style: none;
+    background-color: #ff3838;
+    color:#fff;
+    font-size: 15px;
+    outline: none;
+    box-shadow: 0px 2px 3px rgba(0,0,0,.4);
+    transition: all 1s ease;
+}
+.card button:hover{
+    border-radius: 30px; 
+    transition: all 1s ease;
+}
+/**/
+.Phases2 .phases2,.Phases3 .phases3,.Phases4 .phases4,.Phases5 .phases5,.Phases6 .phases6{
+    margin-bottom: 0;
+    font-size: 2.5rem;
+    text-align: center;
+    font-family: 'Roboto';
+    font-weight: 900;
+    background:url('image/834926.webp');
+    background-position: center;
+    background-clip: text;
+    color: transparent;  
+    text-transform: uppercase;
+}
+
+.Phases51 .comingphases5{
+    margin-bottom: 0;
+    font-size: 1.5rem;
+    text-align: left;
+    font-family: 'Roboto';
+    font-weight: 900;
+}
+.Phases6 h3{
+    margin-bottom: 0;
+    font-size: 1.5rem;
+    text-align: left;
+    font-family: 'Roboto';
+    font-weight: 900;
+}
+
+.pokemon1{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(400px,2fr));
+    grid-column-gap: 270px;
+   
+}
+
+@media (max-width:1110px) {
+    .pokemon {
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+        grid-column-gap: 40px;
+        grid-row-gap: 30px;
+    }
+    .pokemon1 {
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(200px,2fr));
+        grid-column-gap: 270px;
+    }
+    
+    }
+    /*footer*/
+ 
+    .footer{
+        display: grid;
+        grid-template-areas: 'Contactus Contactus'
+                             'logo2 icon1'
+                             'lastsection lastsection';
+                             text-transform: capitalize;
+                             min-height:400px;
+    }
+    .Contactus{
+        max-width: 968px;
+     margin-left: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 2rem;
+          
+    } 
+    .Contactus h1{
+        text-align: center;
+        font-size: 3rem;
+        font-weight: 600;
+    
+    }
+    
+    
+    .Contactus form{
+        background:#fff;
+        padding: 10px;
+        border-radius: 0.5rem;
+        display: flex;
+        align-items: center;
+    }
+    .Contactus form input{
+        border: none;
+        outline: none;
+    }
+    .email{
+        width: 280px;
+    }
+    .Contactusr form input::placeholder{
+        color:#020307;
+        font-size: 0.8rem;
+        font-weight: 400;
+    }
+    .Contactus .btn{
+        text-transform: uppercase;
+        font-family: sans-serif;
+        font-weight: 500;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1.3rem;
+        border: none;
+        color: #fff;
+        padding: 2px 2px;
+        background-color: red;
+    }
+
+    .logo2{
+        grid-area: logo2;
+    }
+    .logo2 h1{
+        margin: 0;
+        font-size: 50px;
+    }
+    .icon1{
+        grid-area: icon1;
+    }
+    .icon1 a i{
+       height: 40px;
+       width: 40px;
+       margin:8px;
+       border-radius: 50%;
+       text-align: center;
+        line-height: 40px; 
+       color: #fff;
+       font-size: 40px;
+       text-decoration: none;
+       transition: all 0.4s ease;
+    }
+    .icon1 a:nth-child(1) i{
+        background: black;
+        padding: 5px;
+        border: 2px solid #4267b2;
+    }
+    .icon1 a:nth-child(1):hover i{
+        background:#4267b2;
+      
+    }
+    .icon1 a:nth-child(2) i{
+        background:black;
+        padding: 5px;
+        border: 2px solid #e1306c;
+    }
+    .icon1 a:nth-child(2):hover i{
+        background:#e1306c;
+      
+    }
+    .icon1 a:nth-child(3) i{
+        background: black;
+        padding: 5px;
+        border: 2px solid red;
+    }
+    .icon1 a:nth-child(3):hover i{
+        background:#ff0000;
+      
+    }
+    .lastsection{
+        grid-area: lastsection;
+        font-size: 40px;
+    text-align: center;
+    } 
+    .lastsection a{
+        text-decoration: none;
+        color: red;
+    }
+
+
+
+/*media*/
+@media (max-width:1000px) {
+    .pokemon {
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+        grid-column-gap: 80px;
+        grid-row-gap: 30px;
+    }
+    .descriptions {
+        overflow: scroll;
+        font-size: 12px;
+    }
+    .descriptions::-webkit-scrollbar {
+        width: 10px;
+        display: none;
+    }
+    /* .menu-bar ul {
+        margin-right: 0px;
+    
+      } */
+      .footer{
+        display: grid;
+        grid-template-areas: 'Contactus'
+                             'logo2''icon1'
+                             'lastsection';
+                             
+    }
+    .timepass {
+        margin-left: 240px;
+    }
+}
+/* @media (max-width:800px) {
+    .hideOnMobile{
+        display: none;
+    }
+    .menu-button{
+        display: block;
+    }
+} */
+
+@media (max-width:700px) {
+.pokemon1 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(100px,2fr));
+    grid-column-gap: 20px;
+}
+.timepass {
+    margin-left: 140px;
+}
+.Contactus{
+ margin-left: 0;
+
+      
+} 
+.email{
+    width: 180px;
+}
+}
+
