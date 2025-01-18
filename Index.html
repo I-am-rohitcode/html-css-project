@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marvalous</title>
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: var(--bg-color, #fff);
+            color: var(--text-color, #000);
+            scroll-behavior: smooth;
+        }
+        header {
+            background: #000;
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header .navbar ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        header .navbar ul li {
+            margin: 0 10px;
+            position: relative;
+        }
+        header .navbar ul li a {
+            text-decoration: none;
+            color: #fff;
+        }
+        header .navbar ul li:hover ul {
+            display: block;
+        }
+        header .navbar ul li ul {
+            display: none;
+            position: absolute;
+            background: #333;
+            padding: 10px;
+            border-radius: 5px;
+            top: 30px;
+            left: 0;
+        }
+        header .navbar ul li ul li {
+            margin: 5px 0;
+        }
+        /* Search Bar */
+        .search-bar {
+            display: flex;
+            margin: 20px auto;
+            width: 80%;
+            max-width: 400px;
+        }
+        .search-bar input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px 0 0 5px;
+        }
+        .search-bar button {
+            background: #000;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 0 5px 5px 0;
+        }
+        .search-bar button:hover {
+            background: #444;
+        }
+        /* Cards Section */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .card {
+            background: #f5f5f5;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .card img {
+            width: 100%;
+            height: auto;
+        }
+        .card h3 {
+            margin: 10px;
+        }
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #000;
+            color: #fff;
+        }
+        footer .socials a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        footer .socials a:hover {
+            color: #ff6600;
+        }
+        /* Back-to-Top Button */
+        #back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #000;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: none;
+            z-index: 1000;
+        }
+        /* Theme Toggle */
+        #theme-toggle {
+            background: none;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+        /* Responsive */
+        @media (max-width: 768px) {
+            header .navbar ul {
+                flex-direction: column;
+            }
+            .card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Marvalous</div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Movies</a>
+                    <ul>
+                        <li><a href="#">Iron Man</a></li>
+                        <li><a href="#">Thor</a></li>
+                        <li><a href="#">Hulk</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <button id="theme-toggle"><i class="fa fa-moon"></i></button>
+    </header>
+
+    <div class="search-bar">
+        <input type="text" placeholder="Search movies..." id="search">
+        <button>Search</button>
+    </div>
+
+    <section class="cards">
+        <div class="card">
+            <img src="https://via.placeholder.com/300" alt="Iron Man">
+            <h3>Iron Man</h3>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/300" alt="Thor">
+            <h3>Thor</h3>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/300" alt="Hulk">
+            <h3>Hulk</h3>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Marvalous | All Rights Reserved</p>
+        <div class="socials">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+        </div>
+    </footer>
+
+    <a href="#" id="back-to-top">Top</a>
+
+    <script>
+        // Back-to-Top Button
+        const backToTop = document.getElementById("back-to-top");
+        window.onscroll = () => {
+            backToTop.style.display = window.scrollY > 300 ? "block" : "none";
+        };
+
+        // Theme Toggle
+        const toggle = document.getElementById("theme-toggle");
+        toggle.addEventListener("click", () => {
+            document.body.classList.toggle("dark-mode");
+            document.documentElement.style.setProperty('--bg-color', document.body.classList.contains("dark-mode") ? "#000" : "#fff");
+            document.documentElement.style.setProperty('--text-color', document.body.classList.contains("dark-mode") ? "#fff" : "#000");
+        });
+    </script>
+</body>
+</html>
